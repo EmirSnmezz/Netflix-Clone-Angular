@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Netflix": {
+    "Netflix-Clone": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/netflix",
+            "outputPath": "dist/netflix-clone",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Netflix:build:production"
+              "buildTarget": "Netflix-Clone:build:production"
             },
             "development": {
-              "buildTarget": "Netflix:build:development"
+              "buildTarget": "Netflix-Clone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,8 +103,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "c8f6ca8a-284c-4065-81d4-86a52b736974"
   }
 }
