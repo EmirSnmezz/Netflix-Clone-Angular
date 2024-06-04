@@ -1,12 +1,13 @@
 
 .container
 {
-    background-color: black;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+                                                                    url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");
 }
 
 .image-container
 {
-    margin-left: 1%;
+    margin-left: 2%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,7 +15,100 @@
     
     button
     {
-        margin-right: 2%;
-        margin-top: 1.5%;
+        margin-right: 5%;
+        margin-top: 1%;
+        border-radius: 5px;
+    }
+}
+
+.big-header
+{
+    font-size: xx-large;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p
+    {
+        font-size: x-large;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+    }
+
+    .form
+    {
+        display: flex;
+        margin-top: 1%;
+        width: 50%;
+        flex-direction: row;
+        justify-content: center;
+
+        mat-form-field
+        {
+            opacity: 0.9;
+            width: 50%;
+            color:white
+        }
+
+        button
+        {
+            margin-left: 2%;
+            width: 23%;
+            border-radius: 0px;            
+            margin-top: 1% ;
+            font-size: large ;
+            
+        }
+       
+    }
+
+}
+
+.container2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 10px solid #232323;
+    background-color: black;
+    color:white;
+    padding-top: 5%;
+    padding-left: 2%;
+    border-bottom: 10px solid #232323;
+
+    .header-content
+    {
+        font-size: 500%;
+    }
+
+    .sub-content
+    {
+        font-size: large;
+    }
+
+    .tv
+    {
+        margin-right: 5%;
+        position: relative; /* İçerik konumlandırma için */
+        overflow: hidden; /* İçeriğin taşmasını engellemek için */
+        position: relative; /* İçerik konumlandırma için */
+        display: inline-block; /* İçeriği yatay hizalama için */
+        z-index:  5;
+        width: 600px;
+    
+    }
+
+    .tv video {
+        position: absolute; /* Videoyu görüntünün üzerine yerleştirmek için */
+        top: 0; /* Görüntünün en üstüne yerleştirme */
+        left: 0; /* Görüntünün en soluna yerleştirme */
+        width: 95%; /* Görüntünün genişliği kadar video genişliği */
+        height: auto; /* Otomatik yükseklik ayarı */
+        opacity: 1; /* İstediğiniz bir opaklık seviyesi */  
+        margin-top: 7%;      
+        background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); /* Renk geçişi */
+        z-index: -1;
     }
 }
