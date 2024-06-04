@@ -96,7 +96,7 @@
         position: relative; /* İçerik konumlandırma için */
         display: inline-block; /* İçeriği yatay hizalama için */
         z-index:  5;
-        width: 600px;
+        width: 800px;
     
     }
 
@@ -104,10 +104,11 @@
         position: absolute; /* Videoyu görüntünün üzerine yerleştirmek için */
         top: 0; /* Görüntünün en üstüne yerleştirme */
         left: 0; /* Görüntünün en soluna yerleştirme */
-        width: 95%; /* Görüntünün genişliği kadar video genişliği */
+        width: 65%; /* Görüntünün genişliği kadar video genişliği */
         height: auto; /* Otomatik yükseklik ayarı */
         opacity: 1; /* İstediğiniz bir opaklık seviyesi */  
-        margin-top: 7%;      
+        margin-top: 7%;    
+        margin-left: 10%;  
         background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); /* Renk geçişi */
         z-index: -1;
     }
