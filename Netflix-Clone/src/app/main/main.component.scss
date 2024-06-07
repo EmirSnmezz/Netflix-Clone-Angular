@@ -1,3 +1,10 @@
+.body
+{
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
 @media screen and (max-width: 700px) {
     .container2 {
         display: flex;
@@ -17,10 +24,9 @@
 
 .container
 {
-    background-image:  linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
-                                                                    url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");
-
-                                                                 
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%),
+                                                                    url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");           
+                                                                    opacity: 0.99;                                                      
 }
 
 .image-container
@@ -37,6 +43,7 @@
         margin-top: 1%;
         border-radius: 5px;
     }
+
 }
 
 .big-header
@@ -67,7 +74,7 @@
         {
             opacity: 0.9;
             width: 50%;
-            color:white
+            color:white;
         }
 
         button
@@ -148,7 +155,7 @@
     background-color: black;
     color:white;
     padding-top: 5%;
-    padding-left: 2%;
+    padding-right: 2%;
     border-bottom: 5px solid #232323;
 
    .header-content
@@ -170,21 +177,7 @@
         display: inline-block; /* İçeriği yatay hizalama için */
         z-index:  5;
         width: 800px;
-    
-    }
-
-    .tv video {
-        position: absolute; /* Videoyu görüntünün üzerine yerleştirmek için */
-        top: 0; /* Görüntünün en üstüne yerleştirme */
-        left: 0; /* Görüntünün en soluna yerleştirme */
-        width: 65%; /* Görüntünün genişliği kadar video genişliği */
-        height: auto; /* Otomatik yükseklik ayarı */
-        opacity: 1; /* İstediğiniz bir opaklık seviyesi */  
-        margin-top: 7%;    
-        margin-left: 10%;  
-        background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); /* Renk geçişi */
-        z-index: -1;
-
+        margin-bottom: 5%;
     }
 }
 
@@ -198,12 +191,12 @@
     background-color: black;
     color:white;
     padding-top: 5%;
-    padding-left: 2%;
+    padding-left: 9%;
     border-bottom: 5px solid #232323;
 
    .header-content
     {
-        font-size: 500%;
+        font-size: 300%;
     }
 
     .sub-content
@@ -213,7 +206,8 @@
 
     .tv
     {
-        margin-right: 18%;
+        margin-left: 10%;
+        margin-right: 8%;
         position: relative; /* İçerik konumlandırma için */
         overflow: hidden; /* İçeriğin taşmasını engellemek için */
         position: relative; /* İçerik konumlandırma için */
@@ -227,11 +221,11 @@
         position: absolute; /* Videoyu görüntünün üzerine yerleştirmek için */
         top: 0; /* Görüntünün en üstüne yerleştirme */
         left: 0; /* Görüntünün en soluna yerleştirme */
-        width: 55%; /* Görüntünün genişliği kadar video genişliği */
+        width: 50%; /* Görüntünün genişliği kadar video genişliği */
         height: auto; /* Otomatik yükseklik ayarı */
         opacity: 1; /* İstediğiniz bir opaklık seviyesi */  
         margin-top: 7%;    
-        margin-left: 18%;  
+        margin-left: 14%;  
         background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); /* Renk geçişi */
         z-index: -1;
 
@@ -251,9 +245,11 @@
     background-color: black;
     color:white;
     padding-top: 5%;
-    padding-left: 2%;
+    padding-left: 7%;
+    padding-right: 5%;
     border-bottom: 5px solid #232323;
 
+   
    .header-content
     {
         font-size: 500%;
@@ -263,34 +259,90 @@
     {
         font-size: large;
     }
+    
 
-    .tv
+    
+}
+
+
+.container6
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    border-top: 5px solid #232323;
+    background-color: black;
+    color:white;
+    border-bottom: 5px solid #232323;
+    padding-top: 3%;
+    
+
+    .header
     {
-        margin-right: 18%;
-        position: relative; /* İçerik konumlandırma için */
-        overflow: hidden; /* İçeriğin taşmasını engellemek için */
-        position: relative; /* İçerik konumlandırma için */
-        display: inline-block; /* İçeriği yatay hizalama için */
-        z-index:  5;
-        width: 800px;
-    
+        font-size: 70px;
     }
 
-    .tv video {
-        position: absolute; /* Videoyu görüntünün üzerine yerleştirmek için */
-        top: 0; /* Görüntünün en üstüne yerleştirme */
-        left: 0; /* Görüntünün en soluna yerleştirme */
-        width: 55%; /* Görüntünün genişliği kadar video genişliği */
-        height: auto; /* Otomatik yükseklik ayarı */
-        opacity: 1; /* İstediğiniz bir opaklık seviyesi */  
-        margin-top: 7%;    
-        margin-left: 18%;  
-        background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)); /* Renk geçişi */
-        z-index: -1;
+    .SSS
+    {
+     width: 75%;
+        
+        
+        font-size: 30px;
+        .SSSHeader
+        {
+            background-color: #2D2D2D;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            place-items: center;
+            padding-left: 2%;
+            padding-right: 2%;
+            height: 70px;
+            font-size: x-large;
+            opacity: 0.85;
+        }
+        
+        .SSSHeader:hover
+        {   
+            opacity: 1.55;
+        }
+
+        .SSSBody
+        {
+            margin-bottom: 1%;
+            background-color: #2D2D2D;
+            font-size: 24px;
+            padding: 2%;
+        }
 
     }
-
     
 
+    .form
+    {
+        display: flex;
+        margin-top: 1%;
+        width: 50%;
+        flex-direction: row;
+        justify-content: center;
+
+        mat-form-field
+        {
+            width: 50%;
+            color:white;
+        }
+
+        button
+        {
+            margin-left: 2%;
+            width: 23%;
+            border-radius: 0px;            
+            margin-top: 1% ;
+            font-size: large ;
+            
+        }
+    }
     
 }

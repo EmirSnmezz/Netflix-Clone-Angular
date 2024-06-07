@@ -1,4 +1,5 @@
-<div class="container">
+<div class="body">
+    <div class="container">
     <div class="image-container">
         <img src="https://www.markpollock.com/wp-content/uploads/2022/03/Netflix-Logo.png" width="10%;">
         <button mat-flat-button color="warn"> <h3>Oturum Aç</h3> </button>
@@ -10,7 +11,7 @@
         <div class=form>
             <mat-form-field>
                 <mat-label> E-Posta Adresi</mat-label>
-                    <input matInput placeholder="xx@xx.com">
+                    <input matInput>
                 </mat-form-field>
                 <button type="submit" mat-flat-button color="warn"> <h3> Başlayın  > </h3></button>
         </div>
@@ -33,8 +34,6 @@
 <div class="container3">
 
     <span class="tv"> <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg">
-        <video data-uia="nmhp-card-animation-asset-video" autoplay="" playsinline="" muted="" loop="">
-        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4"></video> 
         
     </span>
 
@@ -72,3 +71,46 @@
     </div>
 </div>
 
+<div class="container6">
+
+    <h1 class="header"> Sıkça Sorulan Sorular</h1>
+        <cdk-accordion class="SSS">
+            
+            @for (item of sssData; track item; let index = $index) {
+                <cdk-accordion-item class="AccordionItem"
+            
+                  #accordionItem="cdkAccordionItem"
+                  class="example-accordion-item"
+                  role="button"
+                  tabindex="0"
+                  [attr.id]="'accordion-header-' + index"
+                  [attr.aria-expanded]="accordionItem.expanded"
+                  [attr.aria-controls]="'accordion-body-' + index">
+                  <div class="SSSHeader" (click)="accordionItem.toggle()">
+                    {{ item.header }}
+                    <span class="SSSDescription">
+                       {{ accordionItem.expanded ? 'x' : '+' }}
+                    </span>
+                  </div>
+                  <div
+                    class="SSSBody"
+                    role="region"
+                    [style.display]="accordionItem.expanded ? '' : 'none'"
+                    [attr.id]="'accordion-body-' + index"
+                    [attr.aria-labelledby]="'accordion-header-' + index">
+                    {{item.description}}
+                  </div>
+                </cdk-accordion-item>
+              }
+            </cdk-accordion>
+        
+            <h4 class="bottomHeader"> İzlemeye hazır mısınız? Üye olmak ya da hesabınıza tekrar ulaşmak için tek yapmanız gereken e-posta adresinizi girmek. </h4>
+            <div class=form>
+                <mat-form-field>
+                    <mat-label> E-Posta Adresi</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <button type="submit" mat-flat-button color="warn"> <h3> Başlayın  > </h3></button>
+    
+</div>
+</div>
