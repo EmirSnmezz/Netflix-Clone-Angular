@@ -1,0 +1,56 @@
+.container
+{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    justify-content: center;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%),
+                                                                    url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");    
+                                                                           
+
+    .form
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.6);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+        width: 30%;
+        
+
+        .formBody
+        {
+            padding-top: 5%;
+            width: 80%;
+            mat-form-field
+            {
+               
+                width: 100%;
+                color:white;
+            
+            }
+
+            button
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                border-radius: 0px;
+            }
+        }
+       
+    }
+
+}
+
+.image-container
+{
+    margin-left: 2%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
