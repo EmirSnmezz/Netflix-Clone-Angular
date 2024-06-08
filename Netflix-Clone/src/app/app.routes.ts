@@ -9,7 +9,7 @@ export const routes: Routes = [
     },
 
     {
-        path:"register",
+        path:"login",
         component:LoginPageComponent
     }
 ];
