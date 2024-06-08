@@ -5,19 +5,19 @@
         </div>
       
             <div class=form>
-                <div class="formBody">
+                <div class="formBody" [formGroup]="loginFormGroup" >
                     <h1> Oturum Aç </h1>
                     <mat-form-field>
                         <mat-label> E-posta veya cep telefonu numarası</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="email">
                         </mat-form-field>
 
                         <mat-form-field>
                             <mat-label> Parola </mat-label>
-                            <input matInput>
+                            <input matInput formControlName="password">
                         </mat-form-field>
 
-                        <button mat-flat-button color="warn">
+                        <button mat-flat-button color="warn" (click)="register()">
                             Kaydol
                         </button>
 
@@ -42,3 +42,5 @@
         </div>
     </div>
 </div>
+
+<app-footer2></app-footer2>
