@@ -7,6 +7,8 @@ import { Footer2Component } from '../footer2/footer2.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators,FormsModule } from '@angular/forms';
 import { Users } from '../Model/user-data.const';
 import { LoginServiceService } from '../login-service.service';
+import { User } from '../Model/user-model.interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,31 +19,42 @@ import { LoginServiceService } from '../login-service.service';
   styleUrl: './login-page.component.scss'
 })
 export class LoginPageComponent {
-  
+
+  ngOnInit()
+  {
+    if(this._loginService.isLoggedIn())
+      {
+        this._router.navigateByUrl("/browse")
+      }
+
+  }
+
+  constructor(private _loginService: LoginServiceService, private _router:Router){}
   userData = Users
 
-  registerFormGroup = new FormGroup(
-    {
-      email: new FormControl(null),
-      password: new FormControl(null)
-    }
-  )
 
 loginFormGroup = new FormGroup(
   {
-    email: new FormControl("", [Validators.required, Validators.email]),
+    email: new FormControl("", [Validators.email,Validators.required]),
     password: new FormControl("",[Validators.required])
   }
 )
 
-constructor(private _loginService: LoginServiceService){}
 
-register()
+
+// register()
+// {
+//   this._loginService.register(this.loginFormGroup.value)
+//   this.userData.forEach(element => {
+//     alert(element.email)
+//   });
+// }
+
+login()
 {
-  this._loginService.register(this.loginFormGroup.value)
-  this.userData.forEach(element => {
-    alert(element.email)
-  });
+
+this._loginService.login(this.loginFormGroup.value)
+
 }
 
 }

@@ -5,6 +5,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
 import { SSSData } from '../Model/SSS-data.const';
 import { FooterComponent } from '../footer/footer.component';
 import { Router } from '@angular/router';
+import { LoginServiceService } from '../login-service.service';
 @Component({
   selector: 'app-main',
   standalone: true,
@@ -15,7 +16,17 @@ import { Router } from '@angular/router';
 export class MainComponent {
   sssData = SSSData;
 
-  constructor(private _router:Router){}
+  constructor(private _router:Router,private _loginService:LoginServiceService){}
+
+
+  ngOnInit()
+  {
+    if(this._loginService.isLoggedIn())
+      {
+        this._router.navigateByUrl("/browse")
+      }
+
+  }
 
   buttonRoute()
     {

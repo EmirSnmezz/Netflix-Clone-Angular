@@ -1,0 +1,79 @@
+
+body
+{
+    background-color: black;
+    height: 100rem;
+    overflow-x: hidden;
+}
+
+.header
+{
+    display: flex;
+    flex-direction: row;
+    background-image:  linear-gradient(to bottom, rgb(14,14,14) 0, rgba(0, 0, 0, 0) , rgba(9 9 9 / 7%)); opacity: 0.8;
+    overflow-x: hidden;
+    li
+    {
+        a{
+            color:white;
+            text-decoration: none;    
+        }
+        
+    }
+
+    ul
+    {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        place-items: center;
+
+        li
+        {
+            list-style: none;
+            margin-right: 5%;
+        }
+    }
+}
+
+.caroselContainer
+{
+    background-color: transparent;
+    width: 100%;
+    img
+    {
+        width: 100%;
+        position: relative;
+    }
+
+.smallImage
+    {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  width: 30%;
+  height: 30%;
+  display: flex;
+  background-color: transparent;
+
+    }
+
+    .headerDescription
+    {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        color: white;
+        top: 47%;
+        left: 3%;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        font-family: 'Times New Roman', Times, serif;
+
+        h1
+        {
+            font-size: 230%;
+        }
+    }
+}

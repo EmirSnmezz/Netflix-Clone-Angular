@@ -1,0 +1,10 @@
+<div>
+    <h3> {{title}} </h3>
+    <div>
+         @for(movie of movieList; track movie)
+         {
+            <app-movide-card [movie]="movie"></app-movide-card>
+         }
+        
+    </div>
+</div>
